@@ -1,0 +1,196 @@
+<!DOCTYPE html>
+<html lang="fa" dir="rtl">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/css/font.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+        integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/assets/Mizan logo/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/assets/Mizan logo/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/assets/Mizan logo/favicon-16x16.png">
+    <link rel="manifest" href="/assets/Mizan logo/site.webmanifest">
+    <title>میزان | سرعت</title>
+</head>
+
+<body>
+    <header class="main-header hidden">
+        <nav class="nav container ">
+            <a href="/index.html">
+                <h1 class="logo">میزان</h1>
+            </a>
+            <div class="nav__toggler">
+                <div class="bar bar-one"></div>
+                <div class="bar bar-two"></div>
+                <div class="bar bar-three"></div>
+            </div>
+            <ul class="list nav__list">
+                <li class="nav__item"><a href="index.html">صفحه اصلی</a></li>
+                <li class="nav__item"><a href="#cards">تبدیلات</a></li>
+                <li class="nav__item"><a href="#contact-us-sec">نظر دهید</a></li>
+                <li class="nav__item"><a href="#footer">درباره ما</a></li>
+            </ul>
+        </nav>
+    </header>
+    <section class="hero">
+        <div class="hero-alt container block">
+            <div class="hero-alt_logos">
+                <img src="/assets/images/Screenshot 2023-12-12 232840-Recovered.png" alt="Mizan-logo" class="logo-img">
+                <p class="logo">میزان</p>
+            </div>
+            <div class="hero-alt_conv">
+                <h2 class="hero-alt_heading">سرعت</h2>
+                <div class="dropdown">
+                    <div class="select">
+                        <span class="selected">-انتخاب کنید-</span>
+                        <div class="caret"></div>
+                    </div>
+                    <ul class="menu">
+                        <li>متر بر ثانیه به کیلومتر بر ساعت</li>
+                        <li>کیلومتر بر ساعت به متر بر ثانیه</li>
+                        <li>مایل بر ثانیه به کیلومتر بر ساعت</li>
+                        <li>کیلومتر بر ساعت به مایل بر ثانیه</li>
+                        <li>فوت بر ثانیه به کیلومتر بر ساعت</li>
+                        <li>کیلومتر بر ساعت به فوت بر ثانیه</li>
+                    </ul>
+                </div>
+                <p class="error"></p>
+                <input class="user-inp" type="number" onkeypress="handleKeyPress(event)" placeholder="عدد مورد نظر را وارد کنید">
+                <button class="btn calc-btn" onclick="speedFunc()">محاسبه</button>
+                <div class="copy-text">
+                    <textarea readonly name="" id="" cols="10" rows="1" class="result" placeholder="حاصل"></textarea>
+                    <button class="btn copy-btn"><img src="/assets/images/copy-solid.svg" alt=""></button>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="cards container block" style="margin-top: 95px;" id="cards">
+        <h2 class="cards-heading">قابلیت های میزان</h2>
+        <div class="card-container">
+            <a href="/conv-html/length.html">
+                <div class="card hidden">
+                    <i class="fa-solid fa-ruler"></i>
+                    <p class="card-title">طول</p>
+                </div>
+            </a>
+            <a href="/conv-html/area.html">
+                <div class="card hidden">
+                    <img src="/assets/images/wide.png" alt="">
+                    <p class="card-title">مساحت</p>
+                </div>
+            </a>
+            <a href="/conv-html/speed.html">
+                <div class="card hidden">
+                    <img src="/assets/images/dashboard.png" alt="">
+                    <p class="card-title">سرعت</p>
+                </div>
+            </a>
+            <a href="/conv-html/temperature.html">
+                <div class="card hidden">
+                    <i class="fa-solid fa-temperature-three-quarters"></i>
+                    <p class="card-title">دما</p>
+                </div>
+            </a>
+            <a href="/conv-html/pressure.html">
+                <div class="card hidden">
+                    <img src="/assets/images/manometer.png" alt="">
+                    <p class="card-title">فشار</p>
+                </div>
+            </a>
+            <a href="/conv-html/bmi.html">
+                <div class="card hidden">
+                    <img src="/assets/images/diet.png" alt="">
+                    <p class="card-title">bmi</p>
+                </div>
+            </a>
+            <a href="/conv-html/volume.html">
+                <div class="card hidden">
+                    <img src="/assets/images/cube.png" alt="">
+                    <p class="card-title">حجم</p>
+                </div>
+            </a>
+            <a href="/conv-html/mass.html">
+                <div class="card hidden">
+                    <i class="fa-solid fa-weight-scale"></i>
+                    <p class="card-title">جرم</p>
+                </div>
+            </a>
+            <a href="/conv-html/chart.html">
+                <div class="card hidden">
+                    <i class="fa-solid fa-chart-simple"></i>
+                    <p class="card-title">نمودار</p>
+                </div>
+            </a>
+            <a href="/conv-html/age.html">
+                <div class="card hidden">
+                    <p class="temp">سن</p>
+                    <p class="card-title">سن</p>
+                </div>
+            </a>
+
+
+    </section>
+    <section data-aos="fade-up" class="container block" style="margin-top: 95px;" id="contact-us-sec">
+        <h2 class=" contact-us__heading">ارتباط با ما</h2>
+        <div class="contact-us">
+
+
+            <div class="contact-us__map">
+                <img src="/assets/images/map.png" alt="tapsi office location">
+            </div>
+            <div class="contact-us__form">
+                <div class="form-wrapper">
+                    <h3>نظرات شما</h3>
+                    <form>
+                        <input type="text" placeholder="نام و نام خانوادگی">
+                        <input type="email" placeholder="ایمیل خود را وارد کنید">
+                        <textarea placeholder="پیام شما" id="" cols="30" rows="10"></textarea>
+                        <button type="submit" class="btn btn--primary">ارسال نظر</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    <footer class="container block" id="footer" data-aos="fade-up" data-aos-duration="1000">
+        <div class="footer">
+            <p class="logo">میزان</p>
+            <div class="footer_items-cols">
+                <div class="footer_items-col">
+                    <h6>قابلیت ها</h6>
+                    <a href="/conv-html/area.html">مساحت</a>
+                    <a href="/conv-html/length.html">طول</a>
+                    <a href="/conv-html/bmi.html">Bmi</a>
+                    <a href="/conv-html/age.html">سن</a>
+                    <a href="/conv-html/temperature.html">دما</a>
+                </div>
+                <div class="footer_items-col no-heading">
+                    <a href="/conv-html/speed.html">سرعت</a>
+                    <a href="/conv-html/chart.html">نمودار</a>
+                    <a href="/conv-html/pressure.html">فشار</a>
+                    <a href="/conv-html/mass.html">جرم</a>
+                    <a href="/conv-html/volume.html">حجم</a>
+                </div>
+                <div class="footer_items-col">
+                    <h6>ارتباط با ما</h6>
+                    <a href="/index.html">صفحه اصلی</a>
+                    <a href="#contact-us-sec">نظر دهید</a>
+                    <a href="https://github.com/Alinajafi10">گیت هاب</a>
+                </div>
+            </div>
+            <div class="sepration-bar"></div>
+            <p>این سایت توسط سید علی نجفی برای طرح نوجوان خوارزمی طراحی شده.</p>
+        </div>
+    </footer>
+</body>
+<script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script>
+    AOS.init();
+</script>
+<script src="/js/app.js"></script>
+<script src="/conv-js/speed.js"></script>
+
+</html>
