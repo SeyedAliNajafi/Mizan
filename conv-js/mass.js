@@ -105,42 +105,52 @@ const massFunc = function () {
   if (selected.innerText == "پوند به کیلوگرم") {
     result.innerText = (Number(input.value) / 2.205).toFixed(2);
     errorMsg.style.display = "none";
+    return hello
   }
   if (selected.innerText == "کیلوگرم به پوند") {
     result.innerText = (Number(input.value) * 2.205).toFixed(2);
     errorMsg.style.display = "none";
+    return hello;
   }
   if (selected.innerText == "مثقال به گرم") {
     result.innerText = (Number(input.value) * 4.608).toFixed(2);
     errorMsg.style.display = "none";
+    return hello;
   }
   if (selected.innerText == "گرم به مثقال") {
     result.innerText = (Number(input.value) / 4.608).toFixed(2);
     errorMsg.style.display = "none";
+    return hello;
   }
   if (selected.innerText == "اونس به گرم") {
     result.innerText = (Number(input.value) * 28.349).toFixed(2);
     errorMsg.style.display = "none";
+    return hello;
   }
   if (selected.innerText == "گرم به اونس") {
     result.innerText = (Number(input.value) / 28.349).toFixed(2);
     errorMsg.style.display = "none";
+    return hello;
   }
   if (selected.innerText == "قیراط به گرم") {
     result.innerText = Number(input.value) / 5;
     errorMsg.style.display = "none";
+    return hello;
   }
   if (selected.innerText == "گرم به قیراط") {
     result.innerText = Number(input.value) * 5;
     errorMsg.style.display = "none";
+    return hello;
   }
   if (selected.innerText == "میلی گرم به میکروگرم") {
     result.innerText = Number(input.value) * 1000;
     errorMsg.style.display = "none";
+    return hello;
   }
   if (selected.innerText == "گرم به میلی گرم") {
     result.innerText = Number(input.value) * 1000;
     errorMsg.style.display = "none";
+    return hello;
   } else {
     errorMsg.innerText = "خطایی در محاسبه به وجود آمد";
     errorMsg.style.display = "block";

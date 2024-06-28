@@ -61,11 +61,6 @@ body {
     width: 250px;
 }
 
-.container {
-    max-width: 1140px;
-    margin: 0 auto;
-}
-
 option,
 select {
     font-family: 'Vazirmatn';
@@ -205,7 +200,8 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 .nav__item a:hover {
-    color: var(--color-primary);
+    color: var(--primary);
+    transition: all 0.3s;
 }
 
 .nav__item.cta {
@@ -269,7 +265,7 @@ input[type="number"]::-webkit-outer-spin-button {
 }
 
 .nav.nav__expanded .bar-one {
-    transform: rotate(-45deg) translate(-9px, 7px);
+    transform: rotate(-45deg) translate(-7.5px, 8px);
     margin: 8px 0;
 }
 
@@ -926,7 +922,7 @@ textarea::placeholder {
 .footer_items-col a:hover,
 .me a:hover {
     color: var(--accent);
-    transition: all 0.5s;
+    transition: all 0.3s;
 }
 
 .no-heading {
@@ -1093,4 +1089,48 @@ textarea::placeholder {
     padding: 1.5rem 1rem;
     opacity: 0;
     transition: all 0.5s ease-in;
+}
+
+
+
+/* Guide section */
+/* .guide-description{
+
+} */
+
+.guide-heading_main {
+    font-weight: 900;
+    font-size: 2.6em;
+    text-align: center;
+}
+
+.guide {
+    background-color: var(--secondary);
+    border-radius: 15px;
+    padding: 2rem 2.5rem;
+}
+
+.guide-heading {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+}
+
+.small-text {
+    color: #d1d5db;
+    font-size: 1.3rem;
+}
+
+@media screen and (max-width:768px) {
+    .gif{
+        width: 50%;
+    }
+}
+
+.guide-description-text{
+    line-height: 3.5rem;
 }

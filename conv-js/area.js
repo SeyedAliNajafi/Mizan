@@ -105,42 +105,52 @@ const areaFunc = function () {
   if (selected.innerText == "متر مربع به یارد مربع") {
     result.innerText = (Number(input.value) * 1.196).toFixed(2);
     errorMsg.style.display = "none";
+    return valid;
   }
   if (selected.innerText == "یارد مربع به متر مربع") {
     result.innerText = (Number(input.value) / 1.196).toFixed(2);
     errorMsg.style.display = "none";
+    return valid;
   }
   if (selected.innerText == "متر مربع به اینچ مربع") {
     result.innerText = Number(input.value) * 1550;
     errorMsg.style.display = "none";
+    return valid;
   }
   if (selected.innerText == "اینچ مربع به متر مربع") {
     result.innerText = Number(input.value) / 1550;
     errorMsg.style.display = "none";
+    return valid;
   }
   if (selected.innerText == "کیلومتر مربع به جریب") {
     result.innerText = (Number(input.value) * 247.1).toFixed(2);
     errorMsg.style.display = "none";
+    return valid;
   }
   if (selected.innerText == "جریب به کیلومتر مربع") {
     result.innerText = (Number(input.value) / 247.1).toFixed(2);
     errorMsg.style.display = "none";
+    return valid;
   }
   if (selected.innerText == "متر مربع به فوت مربع") {
     result.innerText = (Number(input.value) * 10.764).toFixed(2);
     errorMsg.style.display = "none";
+    return valid;
   }
   if (selected.innerText == "فوت مربع به متر مربع") {
     result.innerText = (Number(input.value) / 10.764).toFixed(2);
     errorMsg.style.display = "none";
+    return valid;
   }
   if (selected.innerText == "کیلومتر مربع به هکتار") {
     result.innerText = Number(input.value) * 100;
     errorMsg.style.display = "none";
+    return valid;
   }
   if (selected.innerText == "هکتار به کیلومتر مربع") {
     result.innerText = Number(input.value) / 100;
     errorMsg.style.display = "none";
+    return valid;
   } else {
     errorMsg.innerText = "خطایی در محاسبه به وجود آمد";
     errorMsg.style.display = "block";

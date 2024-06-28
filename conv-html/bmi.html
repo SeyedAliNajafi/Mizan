@@ -29,7 +29,8 @@
                 <div class="bar bar-three"></div>
             </div>
             <ul class="list nav__list">
-                <li class="nav__item"><a href="index.html">صفحه اصلی</a></li>
+                <li class="nav__item"><a href="/index.html">صفحه اصلی</a></li>
+                <li class="nav__item"><a href="/conv-html/guide.html">راهنما</a></li>
                 <li class="nav__item"><a href="#cards">تبدیلات</a></li>
                 <li class="nav__item"><a href="#contact-us-sec">نظر دهید</a></li>
                 <li class="nav__item"><a href="#footer">درباره ما</a></li>
@@ -47,13 +48,13 @@
 
                 <div class="height-container">
                     <label for="test">قد(cm)</label>
-                    <input class="user-inp input-height" onkeypress="handleKeyPress(event)" min="150" max="200" id="test" type="number"
-                        placeholder="مثال: 170">
+                    <input class="user-inp input-height" onkeypress="handleKeyPress(event)" min="150" max="200"
+                        id="test" type="number" placeholder="مثال: 170">
                 </div>
                 <div class="weight-container">
                     <label for="test-2">وزن(kg)</label>
-                    <input class="user-inp input-weight" onkeypress="handleKeyPress(event)" min="45" max="100" type="number" id="test-2"
-                        placeholder="مثال: 65">
+                    <input class="user-inp input-weight" onkeypress="handleKeyPress(event)" min="45" max="100"
+                        type="number" id="test-2" placeholder="مثال: 65">
                 </div>
                 <button class="btn calc-btn" onclick="bmiFunc()">محاسبه</button>
                 <p class="error"></p>
@@ -64,6 +65,27 @@
                 <p class="body-status"></p>
             </div>
         </div>
+    </section>
+    <section class="block container">
+        <div class="guide">
+            <h3 class="guide-heading">راهنمای شاخص توده بدنی(Bmi)</h3>
+            <p class="guide-text">شاخص توده بدنی یا بی‌ام‌آی (به انگلیسی: body mass index، مخفف BMI) سنجشی آماری برای
+                مقایسه وزن و قد یک فرد است. در واقع
+                این سنجش میزان چاقی را اندازه‌گیری نمی‌کند بلکه ابزاری مناسب است تا سلامت وزن فرد با توجه به قدش تخمین
+                زده شود. این شاخص
+                در بین سال‌های ۱۸۳۰ تا ۱۸۵۰ توسط آدولف کوتله دانشمند بلژیکی ابداع شد. نحوه محاسبه آن بسیار ساده است و در
+                بسیاری جاها
+                برای مشخص کردن بیش‌وزنی و کم‌وزنی استفاده می‌شود. شاخص توده بدنی از طریق تقسیم وزن فرد به کیلوگرم بر
+                توان دوم (x²) قدش
+                به متر بدست می‌آید.</p>
+            <ul>
+                <li>شاخص توده بدنی زیر 18.5:<span style="color:#ffa534 ;"> کمبود وزن</span></li>
+                <li>شاخص توده بدنی زیر 25:<span style="color:#57e32c ;">وزن نرمال </span></li>
+                <li>شاخص توده بدنی زیر 30:<span style="color:#ffe234 ;">اضافه وزن </span></li>
+                <li>شاخص توده بدنی بیشتر از 30:<span style="color:#ff4545 ;">چاقی </span></li>
+            </ul>
+            <p class="guide-text">برای محاسبه شاخص توده بدنی به راحتی قد خود را به سانتی متر و وزن را به کیلوگرم وارد
+                میکنیم و با دکمه محاسبه جواب را بدست می آوریم.</p>
     </section>
     <section class="cards container block" style="margin-top: 95px;" id="cards">
         <h2 class="cards-heading">قابلیت های میزان</h2>

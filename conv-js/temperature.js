@@ -90,30 +90,39 @@ const tempFunc = function () {
   if (selected.innerText == "کلوین به سانتیگراد") {
     result.innerText = (Number(input.value) - 273.15).toFixed(2);
     errorMsg.style.display = "none";
+    return valid;
   }
   if (selected.innerText == "کلوین به فارنهایت") {
     result.innerText = (((Number(input.value) - 273.15) * 9) / 5 + 32).toFixed(
       2
     );
     errorMsg.style.display = "none";
+    return valid;
   }
   if (selected.innerText == "فارنهایت به کلوین") {
     result.innerText = (((Number(input.value) - 32) * 5) / 9 + 273.15).toFixed(
       2
     );
     errorMsg.style.display = "none";
+    return valid;
   }
   if (selected.innerText == "فارنهایت به سانتیگراد") {
     result.innerText = (((Number(input.value) - 32) * 5) / 9).toFixed(2);
     errorMsg.style.display = "none";
+    return valid;
   }
   if (selected.innerText == "سانتیگراد به کلوین") {
     result.innerText = (Number(input.value) + 273.15).toFixed(2);
     errorMsg.style.display = "none";
+    return valid;
   }
   if (selected.innerText == "سانتیگراد به فارنهایت") {
     result.innerText = ((Number(input.value) * 9) / 5 + 32).toFixed(2);
     errorMsg.style.display = "none";
+    return valid;
+  } else {
+    errorMsg.innerText = "خطایی در محاسبه به وجود آمد";
+    errorMsg.style.display = "block";
   }
 };
 function handleKeyPress(event) {

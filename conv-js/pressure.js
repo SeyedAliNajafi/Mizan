@@ -28,47 +28,7 @@ dropdowns.forEach((dropdown) => {
 
 //* Convert
 const calcBtn = document.querySelector(".calc-btn");
-// calcBtn.addEventListener("click", function () {
-//   const input = document.querySelector(".user-inp");
-//   const result = document.querySelector(".result");
-//   const selected = document.querySelector(".selected");
-//   const errorMsg = document.querySelector(".error");
-//   if (Number(input.value) == 0) {
-//     if (selected.innerText == "-انتخاب کنید-") {
-//       errorMsg.innerText = "لطفا یک واحد را انتخاب کنید.";
-//       errorMsg.style.display = "block";
-//       return notvalid;
-//     }
-//     errorMsg.innerText = "لطفا یک عدد مناسب وارد کنید.";
-//     errorMsg.style.display = "block";
-//     return notvalid;
-//   }
-//   if (selected.innerText == "پاسکال به تور") {
-//     result.innerText = (Number(input.value) / 133.3).toFixed(2);
-//     errorMsg.style.display = "none";
-//   }
-//   if (selected.innerText == "تور به پاسکال") {
-//     result.innerText = (Number(input.value) * 133.3).toFixed(2);
-//     errorMsg.style.display = "none";
-//   }
-//   if (selected.innerText == "پاسکال به اتمسفر") {
-//     result.innerText = Number(input.value) / 101300;
-//     errorMsg.style.display = "none";
-//   }
-//   if (selected.innerText == "اتمسفر به پاسکال") {
-//     result.innerText = Number(input.value) * 101300;
-//     errorMsg.style.display = "none";
-//   }
-//   if (selected.innerText == "اتمسفر به بار") {
-//     result.innerText = (Number(input.value) * 1.013).toFixed(2);
-//     errorMsg.style.display = "none";
-//   }
-//   if (selected.innerText == "بار به اتمسفر") {
-//     result.innerText = (Number(input.value) / 1.013).toFixed(2);
-//     errorMsg.style.display = "none";
-//   }
-// });
-const presFunc = function () {
+calcBtn.addEventListener("click", function () {
   const input = document.querySelector(".user-inp");
   const result = document.querySelector(".result");
   const selected = document.querySelector(".selected");
@@ -107,7 +67,56 @@ const presFunc = function () {
     result.innerText = (Number(input.value) / 1.013).toFixed(2);
     errorMsg.style.display = "none";
   }
-}
+});
+const presFunc = function () {
+  const input = document.querySelector(".user-inp");
+  const result = document.querySelector(".result");
+  const selected = document.querySelector(".selected");
+  const errorMsg = document.querySelector(".error");
+  if (Number(input.value) == 0) {
+    if (selected.innerText == "-انتخاب کنید-") {
+      errorMsg.innerText = "لطفا یک واحد را انتخاب کنید.";
+      errorMsg.style.display = "block";
+      return notvalid;
+    }
+    errorMsg.innerText = "لطفا یک عدد مناسب وارد کنید.";
+    errorMsg.style.display = "block";
+    return notvalid;
+  }
+  if (selected.innerText == "پاسکال به تور") {
+    result.innerText = (Number(input.value) / 133.3).toFixed(2);
+    errorMsg.style.display = "none";
+    return valid;
+  }
+  if (selected.innerText == "تور به پاسکال") {
+    result.innerText = (Number(input.value) * 133.3).toFixed(2);
+    errorMsg.style.display = "none";
+    return valid;
+  }
+  if (selected.innerText == "پاسکال به اتمسفر") {
+    result.innerText = Number(input.value) / 101300;
+    errorMsg.style.display = "none";
+    return valid;
+  }
+  if (selected.innerText == "اتمسفر به پاسکال") {
+    result.innerText = Number(input.value) * 101300;
+    errorMsg.style.display = "none";
+    return valid;
+  }
+  if (selected.innerText == "اتمسفر به بار") {
+    result.innerText = (Number(input.value) * 1.013).toFixed(2);
+    errorMsg.style.display = "none";
+    return valid;
+  }
+  if (selected.innerText == "بار به اتمسفر") {
+    result.innerText = (Number(input.value) / 1.013).toFixed(2);
+    errorMsg.style.display = "none";
+    return valid;
+  } else {
+    errorMsg.innerText = "خطایی در محاسبه به وجود آمد";
+    errorMsg.style.display = "block";
+  }
+};
 function handleKeyPress(event) {
   // Check if the pressed key is Enter (key code 13)
   if (event.keyCode === 13) {

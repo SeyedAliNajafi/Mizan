@@ -26,7 +26,6 @@ dropdowns.forEach((dropdown) => {
   });
 });
 
-
 //* Convert
 const calcBtn = document.querySelector(".calc-btn");
 // calcBtn.addEventListener("click", function () {
@@ -74,41 +73,79 @@ const lengthFunc = function () {
   const input = document.querySelector(".user-inp");
   const result = document.querySelector(".result");
   const selected = document.querySelector(".selected");
+  const errorMsg = document.querySelector(".error");
+  if (Number(input.value) == 0) {
+    if (selected.innerText == "-انتخاب کنید-") {
+      errorMsg.innerText = "لطفا یک واحد را انتخاب کنید.";
+      errorMsg.style.display = "block";
+      return notvalid;
+    }
+    errorMsg.innerText = "لطفا یک عدد مناسب وارد کنید.";
+    errorMsg.style.display = "block";
+    return notvalid;
+  }
   if (selected.innerText == "کیلومتر به مایل") {
     result.innerText = (Number(input.value) / 1.609).toFixed(2);
+    errorMsg.style.display = "none";
+    return valid;
   }
   if (selected.innerText == "مایل به کیلومتر") {
     result.innerText = (Number(input.value) * 1.609).toFixed(2);
+    errorMsg.style.display = "none";
+    return valid;
   }
   if (selected.innerText == "اینچ به سانتی متر") {
     result.innerText = (Number(input.value) * 2.54).toFixed(2);
+    errorMsg.style.display = "none";
+    return valid;
   }
   if (selected.innerText == "سانتی متر به اینچ") {
     result.innerText = (Number(input.value) / 2.54).toFixed(2);
+    errorMsg.style.display = "none";
+    return valid;
   }
   if (selected.innerText == "فوت به سانتی متر") {
     result.innerText = (Number(input.value) * 30.48).toFixed(2);
+    errorMsg.style.display = "none";
+    return valid;
   }
   if (selected.innerText == "سانتی متر به فوت") {
     result.innerText = (Number(input.value) / 30.48).toFixed(2);
+    errorMsg.style.display = "none";
+    return valid;
   }
   if (selected.innerText == "متر به یارد") {
     result.innerText = (Number(input.value) * 1.094).toFixed(2);
+    errorMsg.style.display = "none";
+    return valid;
   }
   if (selected.innerText == "یارد به متر") {
     result.innerText = (Number(input.value) / 1.094).toFixed(2);
+    errorMsg.style.display = "none";
+    return valid;
   }
   if (selected.innerText == "دسی متر به متر") {
     result.innerText = (Number(input.value) / 10).toFixed(2);
+    errorMsg.style.display = "none";
+    return valid;
   }
   if (selected.innerText == "متر به دسی متر") {
     result.innerText = (Number(input.value) * 10).toFixed(2);
+    errorMsg.style.display = "none";
+    return valid;
   }
   if (selected.innerText == "سانتی متر به میکرومتر") {
     result.innerText = Number(input.value) * 1000;
+    errorMsg.style.display = "none";
+    return valid;
   }
   if (selected.innerText == "میکرومتر به نانومتر") {
     result.innerText = Number(input.value) * 1000;
+    errorMsg.style.display = "none";
+    return valid;
+  } else {
+    errorMsg.innerText = "خطایی در محاسبه به وجود آمد";
+    errorMsg.style.display = "block";
   }
 };
 function handleKeyPress(event) {

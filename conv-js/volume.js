@@ -93,30 +93,37 @@ const volumeFunc = function () {
   if (selected.innerText == "متر مکعب به لیتر") {
     result.innerText = Number(input.value) * 1000;
     errorMsg.style.display = "none";
+    return valid;
   }
   if (selected.innerText == "لیتر به متر مکعب") {
     result.innerText = Number(input.value) / 1000;
     errorMsg.style.display = "none";
+    return valid;
   }
   if (selected.innerText == "سانتی متر مکعب به سی سی") {
     result.innerText = Number(input.value);
     errorMsg.style.display = "none";
+    return valid;
   }
   if (selected.innerText == "لیتر به میلی لیتر") {
     result.innerText = Number(input.value) * 1000;
     errorMsg.style.display = "none";
+    return valid;
   }
   if (selected.innerText == "میلی لیتر به لیتر") {
     result.innerText = Number(input.value) / 1000;
     errorMsg.style.display = "none";
+    return valid;
   }
   if (selected.innerText == "گالن به لیتر") {
     result.innerText = Number(input.value) * 4.546;
     errorMsg.style.display = "none";
+    return valid;
   }
   if (selected.innerText == "لیتر به گالن") {
     result.innerText = Number(input.value) / 4.546;
     errorMsg.style.display = "none";
+    return valid;
   } else {
     errorMsg.innerText = "خطایی در محاسبه به وجود آمد";
     errorMsg.style.display = "block";
@@ -126,7 +133,6 @@ function handleKeyPress(event) {
   // Check if the pressed key is Enter (key code 13)
   if (event.keyCode === 13) {
     // Trigger the function when Enter is pressed
-    ;
   }
 }
 //* copy btn

@@ -18,7 +18,7 @@
 </head>
 
 <body>
-    <header class="main-header">
+    <header class="main-header hidden">
         <nav class="nav container ">
             <a href="/index.html">
                 <h1 class="logo">میزان</h1>
@@ -30,9 +30,10 @@
             </div>
             <ul class="list nav__list">
                 <li class="nav__item"><a href="/index.html">صفحه اصلی</a></li>
-                <li class="nav__item"><a href="#">تبدیلات</a></li>
+                <li class="nav__item"><a href="/conv-html/guide.html">راهنما</a></li>
+                <li class="nav__item"><a href="#cards">تبدیلات</a></li>
                 <li class="nav__item"><a href="#contact-us-sec">نظر دهید</a></li>
-                <li class="nav__item"><a href="#">درباره ما</a></li>
+                <li class="nav__item"><a href="#footer">درباره ما</a></li>
             </ul>
         </nav>
     </header>
@@ -65,13 +66,35 @@
                     </ul>
                 </div>
                 <p class="error"></p>
-                <input class="user-inp" type="number" onkeypress="handleKeyPress(event)" placeholder="عدد مورد نظر را وارد کنید">
+                <input class="user-inp" type="number" onkeypress="handleKeyPress(event)"
+                    placeholder="عدد مورد نظر را وارد کنید">
                 <button class="btn calc-btn" onclick="massFunc()">محاسبه</button>
                 <div class="copy-text">
                     <textarea readonly name="" id="" cols="10" rows="1" class="result" placeholder="حاصل"></textarea>
                     <button class="btn copy-btn"><img src="/assets/images/copy-solid.svg" alt=""></button>
                 </div>
             </div>
+        </div>
+    </section>
+    <section class="block container">
+        <div class="guide">
+            <h3 class="guide-heading">راهنمای جرم</h3>
+            <p class="guide-text">جرم (به انگلیسی: Mass) مفهومی بنیادی در فیزیک است که به‌طور شهودی مقاومت جسم در برابر
+                شتاب گرفتن در هنگام اعمال نیرو یا
+                قدرت گرانش یک جسم در جذب دیگر اجسام را می‌نمایاند.</p>
+            <p class="guide-text">یکاهای جرم میزان:</p>
+            <ul>
+                <li>گرم</li>
+                <li>کیلوگرم</li>
+                <li>پوند</li>
+                <li>مثقال</li>
+                <li>قیراط</li>
+                <li>اونس</li>
+                <li>میلی گرم</li>
+                <li>میکروگرم</li>
+            </ul>
+            <p class="guide-text">برای تبدیل هر واحدی در سایت میزان به سادگی روی -انتخاب کنید- کلیک کنید و سپس یکای
+                موردنظر خود را انتخاب کنید و سپس مقدار را در فیلد وارد کرده و دکمه محاسبه را میزنیم .</p>
         </div>
     </section>
     <section class="cards container block" style="margin-top: 95px;" id="cards">

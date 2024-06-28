@@ -29,7 +29,8 @@
                 <div class="bar bar-three"></div>
             </div>
             <ul class="list nav__list">
-                <li class="nav__item"><a href="index.html">صفحه اصلی</a></li>
+                <li class="nav__item"><a href="/index.html">صفحه اصلی</a></li>
+                <li class="nav__item"><a href="/conv-html/guide.html">راهنما</a></li>
                 <li class="nav__item"><a href="#cards">تبدیلات</a></li>
                 <li class="nav__item"><a href="#contact-us-sec">نظر دهید</a></li>
                 <li class="nav__item"><a href="#footer">درباره ما</a></li>
@@ -63,13 +64,33 @@
                     </ul>
                 </div>
                 <p class="error"></p>
-                <input class="user-inp" type="number" onkeypress="handleKeyPress(event)" placeholder="عدد مورد نظر را وارد کنید">
+                <input class="user-inp" type="number" onkeypress="handleKeyPress(event)"
+                    placeholder="عدد مورد نظر را وارد کنید">
                 <button class="btn calc-btn" onclick="areaFunc()">محاسبه</button>
                 <div class="copy-text">
                     <textarea readonly name="" id="" cols="10" rows="1" class="result" placeholder="حاصل"></textarea>
                     <button class="btn copy-btn"><img src="/assets/images/copy-solid.svg" alt=""></button>
                 </div>
             </div>
+        </div>
+    </section>
+    <section class="block container">
+        <div class="guide">
+            <h3 class="guide-heading">راهنمای مساحت</h3>
+            <p class="guide-text">مساحت چیست؟ مساحت یا پهنه، کمیتی است غیر براداری که بیانگر اندازه سطح یک شکل دو بعدی و
+                یا سطوح سه بعدی است.</p>
+            <p class="guide-text">یکاهای مساحت در میزان:</p>
+            <ul>
+                <li>متر مربع</li>
+                <li>یارد مربع</li>
+                <li>اینچ مربع</li>
+                <li>کیلومتر مربع</li>
+                <li>جریب</li>
+                <li>فوت مربع</li>
+                <li>هکتار</li>
+            </ul>
+            <p class="guide-text">برای تبدیل هر واحدی در سایت میزان به سادگی روی -انتخاب کنید- کلیک کنید و سپس یکای
+                موردنظر خود را انتخاب کنید و سپس مقدار را در فیلد وارد کرده و دکمه محاسبه را میزنیم .</p>
         </div>
     </section>
     <section class="cards container block" style="margin-top: 95px;" id="cards">
@@ -186,7 +207,7 @@
             <div class="sepration-bar"></div>
             <p>این سایت توسط سید علی نجفی برای طرح نوجوان خوارزمی طراحی شده.</p>
         </div>
-    </footer>   
+    </footer>
 </body>
 <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
 <script>

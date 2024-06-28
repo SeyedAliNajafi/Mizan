@@ -20,7 +20,7 @@
 <body>
     <header class="main-header hidden">
         <nav class="nav container ">
-            <a href="index.html">
+            <a href="/index.html">
                 <h1 class="logo">میزان</h1>
             </a>
             <div class="nav__toggler">
@@ -29,7 +29,8 @@
                 <div class="bar bar-three"></div>
             </div>
             <ul class="list nav__list">
-                <li class="nav__item"><a href="index.html">صفحه اصلی</a></li>
+                <li class="nav__item"><a href="/index.html">صفحه اصلی</a></li>
+                <li class="nav__item"><a href="/conv-html/guide.html">راهنما</a></li>
                 <li class="nav__item"><a href="#cards">تبدیلات</a></li>
                 <li class="nav__item"><a href="#contact-us-sec">نظر دهید</a></li>
                 <li class="nav__item"><a href="#footer">درباره ما</a></li>
@@ -45,7 +46,7 @@
                 </div>
                 <p class="hero-description-text">میزان یک سایت تبدیل واحد ها و انجام برخی از محاسبات ریاضی است این
                     برنامه توسط سید علی نجفی برای جشنواره نوجوان خوارزمی طراحی شده و صرفا به عنوان تست است. میزان دارای
-                    8 واحد برای تبدیل کردن به هم و آسان کردن محاسبات است. هر ماه به میزان واحد ها و قابلیت های جدید
+                    7 واحد برای تبدیل کردن به هم و آسان کردن محاسبات است. هر ماه به میزان واحد ها و قابلیت های جدید
                     اضافه می شود. لطفا برای نظر دادن فرم زیر را پر کنید.
                 </p>
                 <div class="btns">
@@ -159,18 +160,18 @@
     <section data-aos="fade-up" class="container block" id="contact-us-sec">
         <h2 class=" contact-us__heading">ارتباط با ما</h2>
         <div class="contact-us">
-
-
             <div class="contact-us__map">
-                <img src="assets/images/map.png" alt="tapsi office location">
+                <img src="assets/images/mizan-high-resolution-logo-transparent.png">
             </div>
             <div class="contact-us__form">
                 <div class="form-wrapper">
                     <h3>نظرات شما</h3>
-                    <form>
-                        <input id="Name" type="text" placeholder="نام و نام خانوادگی">
-                        <input id="Email" type="email" placeholder="ایمیل خود را وارد کنید">
-                        <textarea placeholder="پیام شما" id="Body" cols="30" rows="10"></textarea>
+                    <form action="https://api.web3forms.com/submit" method="POST">
+                        <input type="hidden" name="access_key" value="2b62930c-0aa8-43a7-9d12-26ebc807eaec">
+                        <input type="hidden" name="redirect" value="https://web3forms.com/success">
+                        <input id="Name" type="text" name="name" placeholder="نام و نام خانوادگی" required>
+                        <input id="Email" type="email" name="email" placeholder="ایمیل خود را وارد کنید" required>
+                        <textarea placeholder="پیام شما" id="Body" cols="30" rows="10" required></textarea>
                         <button type="submit" class="btn btn--primary">ارسال نظر</button>
                     </form>
                 </div>

@@ -86,26 +86,35 @@ const speedFunc = function () {
   if (selected.innerText == "متر بر ثانیه به کیلومتر بر ساعت") {
     result.innerText = (Number(input.value) * 3.6).toFixed(2);
     errorMsg.style.display = "none";
+    return valid;
   }
   if (selected.innerText == "کیلومتر بر ساعت به متر بر ثانیه") {
     result.innerText = (Number(input.value) / 3.6).toFixed(2);
     errorMsg.style.display = "none";
+    return valid;
   }
   if (selected.innerText == "مایل بر ثانیه به کیلومتر بر ساعت") {
     result.innerText = (Number(input.value) * 1.609).toFixed(2);
     errorMsg.style.display = "none";
+    return valid;
   }
   if (selected.innerText == "کیلومتر بر ساعت به مایل بر ثانیه") {
     result.innerText = (Number(input.value) / 1.609).toFixed(2);
     errorMsg.style.display = "none";
+    return valid;
   }
   if (selected.innerText == "فوت بر ثانیه به کیلومتر بر ساعت") {
     result.innerText = (Number(input.value) * 1.097).toFixed(2);
     errorMsg.style.display = "none";
+    return valid;
   }
   if (selected.innerText == "کیلومتر بر ساعت به فوت بر ثانیه") {
     result.innerText = (Number(input.value) / 1.097).toFixed(2);
     errorMsg.style.display = "none";
+    return valid;
+  } else {
+    errorMsg.innerText = "خطایی در محاسبه به وجود آمد";
+    errorMsg.style.display = "block";
   }
 };
 function handleKeyPress(event) {
