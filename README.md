@@ -18,13 +18,8 @@ I've used Html Css Js for this project and it's my first real project(year ago) 
 
 ## Mizan's special abilities
 - Bmi(Body Mass Index)
-- Different kinds of charts
+- Different kinds of charts(Column,Scatter,Pie,Circle,Radar) ![Charts](chart.png)
 - Age calculator
-
-## Features
-- Completely responsive in every viewpoint
-- 
-- dynamic data base
 
 ## Screenshots
 ![Mizan's units](units.png) 
@@ -36,9 +31,3 @@ I've used Html Css Js for this project and it's my first real project(year ago) 
 - [Portfolio](https://seyedalinajafi.ir)
 
 
-## Installation
-```bash
-git clone https://github.com/your-username/your-repo.git](https://github.com/SeyedAliNajafi/Morent
-cd Morent
-npm install
-npm start devx
